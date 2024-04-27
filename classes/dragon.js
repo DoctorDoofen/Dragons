@@ -6,7 +6,7 @@ class Dragon {
   breathesFire() {
     return `${this.name} breathes fire everywhere! BURN!!!!`
   }
-  static getDragons(...monsters) {
+  static getDragons(monsters) {
     let names = []
     for (let monster of monsters) {
       names.push(monster.name)

@@ -1,1 +1,21 @@
-// Your code here 
+class EvilDragon {
+    constructor(name, color, evilDoings, nemesis) {
+        super(name, color)
+        this.evilDoings = evilDoings
+        this.nemesis = nemesis
+    }
+
+    dontInviteThemOverForDinner() {
+        console.log(`${this.name} will ${this.evilDoings}`)
+    }
+
+
+    burnsNemesis() {
+        return `${this.name} destroys ${this.nemesis} with fire! WHOOOSH!!!`
+    }
+}
+
+
+module.exports = {
+    EvilDragon
+}
