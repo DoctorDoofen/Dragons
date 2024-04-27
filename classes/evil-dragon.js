@@ -1,4 +1,6 @@
-class EvilDragon {
+const Dragon = require('./dragon')
+
+class EvilDragon extends Dragon {
     constructor(name, color, evilDoings, nemesis) {
         super(name, color)
         this.evilDoings = evilDoings
@@ -6,7 +8,9 @@ class EvilDragon {
     }
 
     dontInviteThemOverForDinner() {
-        console.log(`${this.name} will ${this.evilDoings}`)
+        for (let doing of this.evilDoings) {
+            console.log(`${this.name} will ${doing}`)
+        }
     }
 
 
@@ -16,6 +20,5 @@ class EvilDragon {
 }
 
 
-module.exports = {
-    EvilDragon
-}
+module.exports = EvilDragon
+

@@ -1,4 +1,4 @@
-const { Dragon } = require('./Dragon')
+const Dragon = require('./dragon')
 
 class FriendlyDragon extends Dragon {
     constructor(name, color, lifeGoals, friend) {
@@ -8,7 +8,9 @@ class FriendlyDragon extends Dragon {
     }
 
     hasLifeGoals() {
-        console.log(`${this.name} likes to ${this.lifeGoals}`)
+        for (let goal of this.lifeGoals) {
+            console.log(`${this.name} likes to ${goal}`)
+        }
     }
 
     helpsPeople() {
@@ -16,6 +18,4 @@ class FriendlyDragon extends Dragon {
     }
 }
 
-module.exports = {
-    FriendlyDragon
-}
+module.exports = FriendlyDragon
